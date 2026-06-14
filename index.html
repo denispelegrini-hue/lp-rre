@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RRE — Landing Pages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --navy: #0d1b2a; --orange: #f4720b; --gray-light: #f5f7fa; --gray-mid: #e2e8f0; --gray-text: #64748b; --text: #1e293b; --success: #16a34a; --warn: #d97706; }
+    body { font-family: 'Inter', sans-serif; background: var(--gray-light); color: var(--text); }
+    header { background: var(--navy); padding: 20px 32px; display: flex; align-items: center; gap: 16px; }
+    header h1 { color: white; font-size: 20px; font-weight: 800; }
+    header h1 span { color: var(--orange); }
+    header p { color: rgba(255,255,255,0.4); font-size: 13px; margin-left: auto; }
+    main { max-width: 960px; margin: 40px auto; padding: 0 24px 60px; }
+    .section-title { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gray-text); margin-bottom: 20px; }
+    .lp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .lp-card { background: white; border-radius: 14px; padding: 24px; border: 1.5px solid var(--gray-mid); text-decoration: none; color: var(--text); transition: all 0.2s; display: flex; flex-direction: column; gap: 10px; }
+    .lp-card:hover { border-color: var(--orange); box-shadow: 0 4px 20px rgba(244,114,11,0.12); transform: translateY(-2px); }
+    .lp-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .lp-icon { width: 44px; height: 44px; background: rgba(244,114,11,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .badge { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 100px; white-space: nowrap; }
+    .badge-done { background: #dcfce7; color: var(--success); }
+    .badge-next { background: #fef3c7; color: var(--warn); }
+    .badge-pending { background: var(--gray-light); color: var(--gray-text); }
+    .priority { font-size: 11px; color: var(--gray-text); font-weight: 600; margin-bottom: 2px; }
+    .priority span { display: inline-block; width: 18px; height: 18px; background: var(--navy); color: white; border-radius: 50%; text-align: center; line-height: 18px; font-size: 10px; font-weight: 800; margin-right: 4px; }
+    .lp-card h3 { font-size: 16px; font-weight: 800; color: var(--navy); }
+    .lp-card p { font-size: 13px; color: var(--gray-text); line-height: 1.5; }
+    .lp-url { font-size: 12px; color: var(--orange); font-weight: 600; font-family: monospace; background: rgba(244,114,11,0.07); padding: 5px 10px; border-radius: 6px; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<header>
+  <div><h1>RRE <span>Landing Pages</span></h1></div>
+  <p>Uso interno · denispelegrini-hue.github.io</p>
+</header>
+<main>
+  <p class="section-title">8 Áreas · Ordem de criação</p>
+  <div class="lp-grid">
+
+    <a href="gas/" class="lp-card">
+      <div class="lp-card-top"><div class="lp-icon">🧪</div><span class="badge badge-done">✓ Publicada</span></div>
+      <div class="priority"><span>1</span> Prioridade 1</div>
+      <h3>Detecção de Gases</h3>
+      <p>Lei 2507 · ISO 14000 · ISO 45001 · Phoenix Contact</p>
+      <div class="lp-url">gas/</div>
+    </a>
+
+    <a href="automacao/" class="lp-card">
+      <div class="lp-card-top"><div class="lp-icon">⚙️</div><span class="badge badge-next">Em criação</span></div>
+      <div class="priority"><span>2</span> Prioridade 2</div>
+      <h3>Automação Industrial</h3>
+      <p>PLCs, SCADA, redes industriais, painéis de controle</p>
+      <div class="lp-url">automacao/</div>
+    </a>
+
+    <a href="quadros/" class="lp-card">
+      <div class="lp-card-top"><div class="lp-icon">⚡</div><span class="badge badge-pending">Pendente</span></div>
+      <div class="priority"><span>3</span> Prioridade 3</div>
+      <h3>Quadros Elétricos</h3>
+      <p>CCM, painéis de distribuição, quadros de automação</p>
+      <div class="lp-url">quadros/</div>
+    </a>
+
+    <a href="ergonomia/" class="lp-card">
+      <div class="lp-card-top"><div class="lp-icon">🪑</div><span class="badge badge-pending">Pendente</span></div>
+      <div class="priority"><span>4</span> Prioridade 4</div>
+      <h3>Ergonomia</h3>
+      <p>Laudos NR-17, análise ergonômica do trabalho, AEP</p>
+      <div class="lp-url">ergonomia/</div>
+    </a>
+
+    <a href="carregadores/" class="lp-card">
+      <div class="lp-card-top"><div class="lp-icon">🔌</div><span class="badge badge-pending">Pendente</span></div>
+      <div class="priority"><span>5</span> Prioridade 5</div>
+      <h3>Carregadores EV</h3>
+      <p>Infraestrutura de recarga elétrica para frotas</p>
+      <div class="lp-url">carregadores/</div>
+    </a>
+
+    <a href="eficiencia/" class="lp-card">
+      <div class="lp-card-top"><div class="lp-icon">📉</div><span class="badge badge-pending">Pendente</span></div>
+      <div class="priority"><span>6</span> Prioridade 6</div>
+      <h3>Eficiência Energética</h3>
+      <p>Redução de consumo, análise de demanda, M&amp;V</p>
+      <div class="lp-url">eficiencia/</div>
+    </a>
+
+    <a href="pcb/" class="lp-card">
+      <div class="lp-card-top"><div class="lp-icon">🔧</div><span class="badge badge-pending">Pendente</span></div>
+      <div class="priority"><span>7</span> Prioridade 7</div>
+      <h3>Componentes PCB</h3>
+      <p>Terminais, conectores, relés Phoenix Contact</p>
+      <div class="lp-url">pcb/</div>
+    </a>
+
+    <a href="energia-solar/" class="lp-card">
+      <div class="lp-card-top"><div class="lp-icon">☀️</div><span class="badge badge-pending">Pendente</span></div>
+      <div class="priority"><span>8</span> Prioridade 8</div>
+      <h3>Energia Solar &amp; BESS</h3>
+      <p>Fotovoltaico industrial, armazenamento de energia</p>
+      <div class="lp-url">energia-solar/</div>
+    </a>
+
+  </div>
+</main>
+</body>
+</html>
