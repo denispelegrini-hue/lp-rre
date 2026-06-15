@@ -1796,16 +1796,25 @@
     btn.style.background = '#16a34a';
     btn.disabled = true;
 
+    // Envia qualificação para a VPS em background (invisível ao lead)
+    fetch('https://api.rretecnologia.com.br/leads/lp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nome, empresa, cargo,
+        whatsapp: telefone,
+        area: 'Detecção de Gases',
+        score: totalScore,
+        classificacao,
+        iso: isoText,
+        auditoria: auditoriaText,
+        gas_atual: gasAtualText
+      })
+    }).catch(() => {}); // silencioso se falhar
+
+    // Mensagem limpa para o lead — sem dados de qualificação
     const msg = encodeURIComponent(
-      `[ÁREA: Detecção de Gases | ${classificacao}]\n\n` +
-      `Nome: ${nome}\n` +
-      `Cargo: ${cargo}\n` +
-      `Empresa: ${empresa}\n` +
-      `WhatsApp: ${telefone}\n\n` +
-      `--- Qualificação (score: ${totalScore}) ---\n` +
-      `ISO 14000/45001: ${isoText}\n` +
-      `Auditoria em 90 dias: ${auditoriaText}\n` +
-      `Detecção de gás atual: ${gasAtualText}`
+      `Olá! Me chamo ${nome} e tenho interesse nos serviços de Detecção de Gases da RRE Engenharia. Podem me contatar?`
     );
     setTimeout(() => {
       window.open(`https://wa.me/5592992930104?text=${msg}`, '_blank');
