@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conformidade com a Lei 2507, ISO 14000 e ISO 45001 | RRE Soluções Industriais</title>
+  <meta name="description" content="Sua indústria no PIM está em conformidade com a Lei 2507/2019? Sem detecção de gás certificada, suas certificações ISO 14000 e ISO 45001 estão em risco. RRE entrega projeto completo com tecnologia Phoenix Contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0d1b2a;
+      --navy-mid: #1a2f45;
+      --navy-light: #243d56;
+      --orange: #f4720b;
+      --orange-light: #ff8c2a;
+      --orange-dark: #d45e00;
+      --white: #ffffff;
+      --gray-light: #f5f7fa;
+      --gray-mid: #e2e8f0;
+      --gray-text: #64748b;
+      --danger: #dc2626;
+      --success: #16a34a;
+      --text: #1e293b;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ─── NAVBAR ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--navy);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-cta {
+      background: var(--orange);
+      color: white;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover { background: var(--orange-light); }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: var(--navy);
+      padding: 100px 24px 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(244,114,11,0.12) 0%, transparent 65%);
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 56px;
+      align-items: center;
+      position: relative;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    .hero-left { }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244,114,11,0.15);
+      border: 1px solid rgba(244,114,11,0.35);
+      color: var(--orange-light);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 8px; height: 8px;
+      background: var(--orange);
+      border-radius: 50%;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    .hero h1 {
+      font-size: clamp(26px, 3.5vw, 44px);
+      font-weight: 900;
+      color: white;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+
+    .hero-sub {
+      font-size: clamp(14px, 1.6vw, 17px);
+      color: rgba(255,255,255,0.7);
+      max-width: 560px;
+      margin-bottom: 32px;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    /* ─── HERO FORM CARD ─── */
+    .hero-form-card {
+      background: white;
+      border-radius: 20px;
+      padding: 32px 28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-form-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .hero-form-card > p {
+      font-size: 13px;
+      color: var(--gray-text);
+      margin-bottom: 20px;
+    }
+
+    .hero-form-card .form-group {
+      margin-bottom: 14px;
+    }
+
+    .hero-form-card .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .hero-form-card .form-group input,
+    .hero-form-card .form-group select {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--gray-mid);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: white;
+      transition: border-color 0.2s;
+      outline: none;
+      appearance: none;
+    }
+
+    .hero-form-card .form-group input:focus,
+    .hero-form-card .form-group select:focus {
+      border-color: var(--orange);
+    }
+
+    .hero-form-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--orange);
+      color: white;
+      font-weight: 800;
+      font-size: 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      margin-top: 4px;
+      box-shadow: 0 6px 20px rgba(244,114,11,0.4);
+      transition: all 0.2s;
+    }
+
+    .hero-form-btn:hover {
+      background: var(--orange-light);
+      transform: translateY(-1px);
+    }
+
+    .hero-form-note {
+      text-align: center;
+      font-size: 11px;
+      color: var(--gray-text);
+      margin-top: 12px;
+    }
+
+    /* ─── FLOATING WA BUTTON ─── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 14px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.5);
+      transition: all 0.25s;
+    }
+
+    .wa-float:hover {
+      background: #20bf5b;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(37,211,102,0.6);
+    }
+
+    .wa-float svg { flex-shrink: 0; }
+
+    @media (max-width: 480px) {
+      .wa-float span { display: none; }
+      .wa-float { padding: 16px; border-radius: 50%; }
+    }
+
+    /* ─── EXIT POPUP ─── */
+    .exit-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .exit-overlay.show { display: flex; }
+
+    .exit-popup {
+      background: white;
+      border-radius: 20px;
+      padding: 44px 40px;
+      max-width: 480px;
+      width: 100%;
+      position: relative;
+      text-align: center;
+      animation: popIn 0.3s ease;
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.92); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .exit-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      font-size: 22px;
+      cursor: pointer;
+      color: var(--gray-text);
+      background: none;
+      border: none;
+      line-height: 1;
+    }
+
+    .exit-popup .exit-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .exit-popup h3 {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .exit-popup p {
+      font-size: 15px;
+      color: var(--gray-text);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .exit-popup .btn-whatsapp {
+      width: 100%;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .exit-dismiss {
+      display: block;
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--gray-text);
+      cursor: pointer;
+      text-decoration: underline;
+      background: none;
+      border: none;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: white;
+      font-weight: 800;
+      font-size: 16px;
+      padding: 16px 36px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 8px 30px rgba(244,114,11,0.4);
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-light);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(244,114,11,0.5);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      font-size: 15px;
+      padding: 16px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,0.5);
+      color: white;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      position: relative;
+    }
+
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.5);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .hero-trust-item svg {
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+
+    /* ─── RISK BANNER ─── */
+    .risk-banner {
+      background: linear-gradient(135deg, #7f1d1d, #991b1b);
+      padding: 20px 24px;
+      text-align: center;
+    }
+
+    .risk-banner p {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      max-width: 860px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .risk-banner strong { color: #fca5a5; }
+
+    /* ─── SECTION SHARED ─── */
+    section { padding: 80px 24px; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(24px, 3.5vw, 38px);
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: var(--gray-text);
+      max-width: 620px;
+      line-height: 1.8;
+    }
+
+    /* ─── DUAL RISK ─── */
+    .dual-risk {
+      background: var(--gray-light);
+    }
+
+    .dual-risk-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .dual-risk-header .section-sub { margin: 0 auto; }
+
+    .risk-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+
+    .risk-card {
+      background: white;
+      border-radius: 16px;
+      padding: 36px 32px;
+      border: 2px solid transparent;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .risk-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+    }
+
+    .risk-card.card-legal::before { background: var(--danger); }
+    .risk-card.card-iso::before { background: #2563eb; }
+
+    .risk-card-icon {
+      width: 56px; height: 56px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .risk-card.card-legal .risk-card-icon { background: #fef2f2; }
+    .risk-card.card-iso .risk-card-icon { background: #eff6ff; }
+
+    .risk-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .risk-card .law-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+
+    .risk-card.card-legal .law-tag {
+      background: #fef2f2;
+      color: var(--danger);
+    }
+
+    .risk-card.card-iso .law-tag {
+      background: #eff6ff;
+      color: #2563eb;
+    }
+
+    .risk-card p {
+      font-size: 15px;
+      color: #4b5563;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+
+    .risk-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .risk-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #374151;
+      font-weight: 500;
+    }
+
+    .risk-list li::before {
+      content: '✕';
+      color: var(--danger);
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .risk-alert {
+      background: linear-gradient(135deg, #1e3a5f, #0d1b2a);
+      border-radius: 16px;
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .risk-alert-icon {
+      font-size: 40px;
+      flex-shrink: 0;
+    }
+
+    .risk-alert p {
+      color: rgba(255,255,255,0.85);
+      font-size: 16px;
+      line-height: 1.7;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .risk-alert strong { color: var(--orange); }
+
+    /* ─── SOLUTION ─── */
+    .solution {
+      background: white;
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .solution-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    .solution-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .step {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 40px; height: 40px;
+      background: var(--orange);
+      color: white;
+      font-weight: 800;
+      font-size: 15px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.6;
+    }
+
+    .solution-visual {
+      background: var(--navy);
+      border-radius: 20px;
+      padding: 36px;
+      color: white;
+    }
+
+    .solution-visual h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .solution-visual p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 28px;
+    }
+
+    .deliverable-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .deliverable-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: rgba(255,255,255,0.9);
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.08);
+      font-weight: 500;
+    }
+
+    .deliverable-list li span {
+      width: 32px; height: 32px;
+      background: rgba(244,114,11,0.2);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ─── PHOENIX CONTACT ─── */
+    .phoenix {
+      background: var(--navy);
+      color: white;
+    }
+
+    .phoenix-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .phoenix-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    .phoenix .section-title { color: white; }
+    .phoenix .section-sub { color: rgba(255,255,255,0.65); }
+
+    .phoenix-exclusive {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244,114,11,0.15);
+      border: 1px solid rgba(244,114,11,0.4);
+      color: var(--orange-light);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .phoenix-points {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .phoenix-point {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .phoenix-point-icon {
+      width: 44px; height: 44px;
+      background: rgba(244,114,11,0.15);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .phoenix-point h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .phoenix-point p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+
+    .phoenix-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 36px;
+    }
+
+    .phoenix-logo-area {
+      text-align: center;
+      padding: 28px 20px;
+      background: white;
+      border-radius: 14px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Phoenix Contact SVG logo */
+    .pc-logo-svg { display: block; }
+
+    .phoenix-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .phoenix-stat {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+
+    .phoenix-stat strong {
+      display: block;
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .phoenix-stat span {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* ─── SOCIAL PROOF ─── */
+    .proof {
+      background: var(--gray-light);
+    }
+
+    .proof-header { text-align: center; margin-bottom: 52px; }
+    .proof-header .section-sub { margin: 0 auto; }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .proof-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .proof-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .proof-avatar {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .proof-card:nth-child(1) .proof-avatar { background: #1d4ed8; }
+    .proof-card:nth-child(2) .proof-avatar { background: #15803d; }
+    .proof-card:nth-child(3) .proof-avatar { background: #9333ea; }
+
+    .proof-name strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .proof-name span {
+      font-size: 13px;
+      color: var(--gray-text);
+    }
+
+    .proof-card blockquote {
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.75;
+      font-style: normal;
+    }
+
+    .proof-card blockquote::before {
+      content: '\201C';
+      font-size: 40px;
+      color: var(--orange);
+      line-height: 0;
+      vertical-align: -14px;
+      margin-right: 4px;
+    }
+
+    .industry-logos {
+      text-align: center;
+    }
+
+    .industry-logos p {
+      font-size: 13px;
+      color: var(--gray-text);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 24px;
+    }
+
+    .logos-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .logo-pill {
+      background: white;
+      border: 1px solid var(--gray-mid);
+      border-radius: 8px;
+      padding: 10px 22px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy-mid);
+      letter-spacing: 0.5px;
+    }
+
+    /* ─── CTA SECTION ─── */
+    .cta-section {
+      background: white;
+      padding: 80px 24px;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border-radius: 24px;
+      padding: 64px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 280px; height: 280px;
+      background: radial-gradient(circle, rgba(244,114,11,0.2) 0%, transparent 70%);
+    }
+
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(244,114,11,0.12) 0%, transparent 70%);
+    }
+
+    .cta-box h2 {
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 900;
+      color: white;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-box p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 32px;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+      font-weight: 800;
+      font-size: 16px;
+      padding: 16px 36px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+      box-shadow: 0 8px 30px rgba(37,211,102,0.35);
+    }
+
+    .btn-whatsapp:hover {
+      background: #20bf5b;
+      transform: translateY(-2px);
+    }
+
+    .cta-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.55);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .cta-trust-item::before {
+      content: '✓';
+      color: #4ade80;
+      font-weight: 800;
+    }
+
+    /* ─── FORM SECTION ─── */
+    .form-section {
+      background: var(--gray-light);
+      padding: 80px 24px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .form-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    .form-left h2 {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .form-left p {
+      font-size: 15px;
+      color: var(--gray-text);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .form-left-items {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-left-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .form-left-item-icon {
+      width: 36px; height: 36px;
+      background: rgba(244,114,11,0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    .form-left-item-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .form-left-item-text span {
+      font-size: 13px;
+      color: var(--gray-text);
+    }
+
+    .contact-form {
+      background: white;
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+    }
+
+    .contact-form h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .contact-form > p {
+      font-size: 14px;
+      color: var(--gray-text);
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--gray-mid);
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: white;
+      transition: border-color 0.2s;
+      outline: none;
+      appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--orange);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 15px;
+      background: var(--orange);
+      color: white;
+      font-weight: 800;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+      margin-top: 8px;
+      box-shadow: 0 6px 24px rgba(244,114,11,0.35);
+    }
+
+    .form-submit:hover {
+      background: var(--orange-light);
+      transform: translateY(-1px);
+    }
+
+    .form-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--gray-text);
+      margin-top: 14px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--navy);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--orange); }
+
+    .footer-logo {
+      font-size: 18px;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .footer-logo span { color: var(--orange); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 600px) {
+      section { padding: 60px 20px; }
+      .risk-alert { padding: 24px; }
+      .cta-box { padding: 40px 24px; }
+      .contact-form { padding: 28px 20px; }
+      .form-row { grid-template-columns: 1fr; }
+      nav { padding: 14px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="https://www.rretecnologia.com.br" class="nav-logo" target="_blank">
+    <img src="https://www.rretecnologia.com.br/images/comuns/logo-rre.svg" alt="RRE Soluções Industriais" />
+  </a>
+  <a href="#diagnostico" class="nav-cta">Agendar Diagnóstico</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <!-- Esquerda: copy -->
+    <div class="hero-left">
+      <div class="hero-badge">⚠ Atenção: Indústrias do PIM</div>
+      <h1>Sua indústria está preparada para a auditoria <em>ISO 14000 e ISO 45001</em>?</h1>
+      <p class="hero-sub">A Lei 2507/2019 obriga todas as instalações industriais de Manaus a ter sistemas certificados de detecção de gás. Sem conformidade, suas <strong style="color:white">certificações ISO estão em risco</strong> — e as consequências vão além de uma multa.</p>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Representante exclusivo Phoenix Contact no AM
+        </div>
+        <div class="hero-trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Projeto + Instalação + ART + Book As Built
+        </div>
+        <div class="hero-trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Conformidade total com a Lei 2507 e NR-20
+        </div>
+      </div>
+    </div>
+
+    <!-- Direita: formulário acima da dobra -->
+    <div class="hero-form-card">
+      <h3>Agende um Diagnóstico</h3>
+      <p>Resposta em até 48h • Sem compromisso</p>
+      <form onsubmit="handleHeroSubmit(event)">
+        <div class="form-group">
+          <label for="h-nome">Seu nome *</label>
+          <input type="text" id="h-nome" placeholder="João Silva" required />
+        </div>
+        <div class="form-group">
+          <label for="h-empresa">Empresa *</label>
+          <input type="text" id="h-empresa" placeholder="Nome da indústria" required />
+        </div>
+        <div class="form-group">
+          <label for="h-cargo">Cargo *</label>
+          <input type="text" id="h-cargo" placeholder="Gerente de Manutenção" required />
+        </div>
+        <div class="form-group">
+          <label for="h-telefone">WhatsApp *</label>
+          <input type="tel" id="h-telefone" placeholder="(92) 99999-9999" required />
+        </div>
+        <div class="form-group">
+          <label for="h-iso">Sua empresa possui ISO 14000 ou 45001? *</label>
+          <select id="h-iso" required>
+            <option value="">Selecione...</option>
+            <option value="2">Em processo de certificação</option>
+            <option value="2">Sim, já certificada</option>
+            <option value="0">Não possui</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="h-auditoria">Tem auditoria prevista nos próximos 90 dias? *</label>
+          <select id="h-auditoria" required>
+            <option value="">Selecione...</option>
+            <option value="3">Sim</option>
+            <option value="1">Não nos próximos 90 dias</option>
+            <option value="0">Não sei</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="h-gas-atual">Sua planta já possui detecção de gás? *</label>
+          <select id="h-gas-atual" required>
+            <option value="">Selecione...</option>
+            <option value="2">Não possui</option>
+            <option value="3">Possui, mas sem certificação</option>
+            <option value="-1">Possui e está certificada</option>
+          </select>
+        </div>
+        <button type="submit" class="hero-form-btn" id="hero-btn">
+          Falar com Especialista Agora →
+        </button>
+      </form>
+      <p class="hero-form-note">🔒 Seus dados são tratados com sigilo</p>
+    </div>
+  </div>
+</section>
+
+<!-- RISK BANNER -->
+<div class="risk-banner">
+  <p>📋 Perícia confirmou: vazamento de gás causou explosão no apartamento 101 em <strong>Condomínio de Manaus</strong> — 1 morte e 6 feridos. No Brasil, acidentes industriais com amônia chegaram a <strong>1 ocorrência a cada 6 dias em 2025</strong>. Instalações sem detecção certificada continuam expostas.</p>
+</div>
+
+<!-- DUAL RISK -->
+<section class="dual-risk">
+  <div class="container">
+    <div class="dual-risk-header">
+      <span class="section-label">O Problema</span>
+      <h2 class="section-title">Dois riscos que sua indústria não pode ignorar</h2>
+      <p class="section-sub">A ausência de um sistema certificado de detecção de gás expõe sua empresa a penalidades legais e à perda das certificações ISO — simultaneamente.</p>
+    </div>
+
+    <div class="risk-cards">
+      <div class="risk-card card-legal">
+        <div class="risk-card-icon">⚖️</div>
+        <span class="law-tag">Lei Municipal 2507/2019</span>
+        <h3>Risco Legal</h3>
+        <p>A Lei 2507 de Manaus exige sistemas de detecção de gás e válvulas de bloqueio automático em todos os estabelecimentos comerciais, industriais e residenciais. A lei está em vigor e a fiscalização está sendo intensificada.</p>
+        <ul class="risk-list">
+          <li>Multas e autuações pela PMM e Corpo de Bombeiros</li>
+          <li>Interdição parcial ou total da instalação</li>
+          <li>Responsabilidade civil em caso de acidente</li>
+          <li>Responsabilidade criminal para os gestores</li>
+        </ul>
+      </div>
+
+      <div class="risk-card card-iso">
+        <div class="risk-card-icon">🏆</div>
+        <span class="law-tag">ISO 14000 e ISO 45001 — Requisitos de Certificação</span>
+        <h3>Risco de Certificação</h3>
+        <p>A ISO 14000 (gestão ambiental) e a ISO 45001 (saúde e segurança ocupacional) exigem que a empresa atenda a todos os requisitos legais aplicáveis à sua operação. Uma não conformidade com a Lei 2507 é automaticamente uma não conformidade no seu sistema de gestão.</p>
+        <ul class="risk-list">
+          <li>Não conformidade grave em auditoria externa</li>
+          <li>Suspensão ou cancelamento do certificado ISO</li>
+          <li>Perda de contratos com clientes que exigem ISO</li>
+          <li>Impacto direto em exportações e licitações públicas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="risk-alert">
+      <div class="risk-alert-icon">💡</div>
+      <p>O argumento não é mais apenas <em>"você pode ser multado"</em>. Com a ISO 14000 e a ISO 45001, a ausência de detecção de gás se torna uma <strong>não conformidade documentada em auditoria internacional</strong>. Isso coloca em risco contratos, clientes e a operação inteira.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution" id="solucao">
+  <div class="container">
+    <div class="solution-grid">
+      <div>
+        <span class="section-label">A Solução</span>
+        <h2 class="section-title">Do projeto à documentação: conformidade total, sem complicação</h2>
+        <p class="section-sub">A RRE entrega o sistema completo de detecção de gás — projetado, instalado e documentado para atender simultaneamente a Lei 2507/2019, a ISO 14000, a ISO 45001 e as NRs aplicáveis.</p>
+        <div class="solution-steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Diagnóstico técnico</h4>
+              <p>Levantamento da sua planta, identificação dos pontos críticos e dos gases presentes na operação.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>Projeto de engenharia</h4>
+              <p>Dimensionamento dos detectores, pontos de instalação, central de alarme e lógicas de bloqueio.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>Instalação certificada</h4>
+              <p>Execução por equipe técnica especializada, com componentes Phoenix Contact de automação e conectividade.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4>Documentação para auditoria</h4>
+              <p>ART assinada, As Built completo, Book técnico e relatórios prontos para as auditorias ISO 14000 e ISO 45001.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="solution-visual">
+        <h3>O que sua empresa recebe</h3>
+        <p>Entrega completa — sem lacunas para auditoria</p>
+        <ul class="deliverable-list">
+          <li><span>📐</span> Projeto técnico de engenharia</li>
+          <li><span>⚡</span> Instalação com componentes certificados</li>
+          <li><span>📄</span> ART — Anotação de Responsabilidade Técnica</li>
+          <li><span>🗺️</span> As Built — Planta completa atualizada</li>
+          <li><span>📋</span> Book técnico para auditorias ISO</li>
+          <li><span>🔔</span> Central de alarme + válvulas de bloqueio</li>
+          <li><span>✅</span> Laudo de conformidade Lei 2507/2019</li>
+          <li><span>🔧</span> Suporte técnico pós-instalação</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOENIX CONTACT -->
+<section class="phoenix">
+  <div class="container">
+    <div class="phoenix-grid">
+      <div>
+        <div class="phoenix-exclusive">★ Exclusividade no Amazonas</div>
+        <h2 class="section-title">Tecnologia Phoenix Contact — padrão mundial em automação industrial</h2>
+        <p class="section-sub">A RRE é o único representante autorizado da Phoenix Contact no Estado do Amazonas. Isso significa que sua indústria tem acesso aos componentes de automação e conectividade da mesma empresa que equipa as maiores plantas industriais do mundo — com suporte técnico local e rastreabilidade total para auditoria.</p>
+        <div class="phoenix-points">
+          <div class="phoenix-point">
+            <div class="phoenix-point-icon">🌍</div>
+            <div>
+              <h4>Líder mundial em automação e conectividade industrial</h4>
+              <p>Phoenix Contact está presente em mais de 100 países com mais de 100.000 produtos — de terminais e conectores até controladores e sistemas de automação industrial.</p>
+            </div>
+          </div>
+          <div class="phoenix-point">
+            <div class="phoenix-point-icon">📜</div>
+            <div>
+              <h4>Rastreabilidade para ISO 14000 e ISO 45001</h4>
+              <p>Cada componente possui certificação e datasheet técnico completo — documentação rastreável para auditorias nacionais e internacionais sem lacunas.</p>
+            </div>
+          </div>
+          <div class="phoenix-point">
+            <div class="phoenix-point-icon">🛡️</div>
+            <div>
+              <h4>Componentes para ambientes industriais críticos</h4>
+              <p>Equipamentos robustos para ambientes com alta exigência técnica — conformidade com normas nacionais e internacionais de segurança industrial.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phoenix-card">
+        <div class="phoenix-logo-area">
+          <!-- Phoenix Contact Logo (original) -->
+          <svg width="260" viewBox="0 0 327 30" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Phoenix Contact">
+            <path d="M32.7 14.6C32.7 6.6 26.1 0 18 0H0V29.2H18C26.1 29.3 32.7 22.7 32.7 14.6" fill="#009BA3"/>
+            <path d="M326.5 14.6C326.5 6.5 320 0 311.9 0C303.8 0 297.3 6.5 297.3 14.6C297.3 22.7 303.9 29.2 311.9 29.2C320 29.2 326.5 22.7 326.5 14.6" fill="#009BA3"/>
+            <path d="M262.4 14.6C262.4 6.5 255.9 0 247.8 0H215.8C207.7 0 201.2 6.5 201.2 14.6C201.2 22.7 207.7 29.2 215.8 29.2H247.8C255.9 29.3 262.4 22.7 262.4 14.6" fill="#009BA3"/>
+            <path d="M64.6999 14.6C64.6999 6.6 58.0999 0 50.0999 0C41.9999 0 35.3999 6.6 35.3999 14.6C35.3999 22.7 41.8999 29.2 49.9999 29.2C58.0999 29.3 64.6999 22.7 64.6999 14.6" fill="#93C11C"/>
+            <path d="M294.5 14.6C294.5 6.5 288 0 279.9 0C271.8 0 265.3 6.5 265.3 14.6C265.3 22.7 271.8 29.2 279.9 29.2C287.9 29.3 294.5 22.7 294.5 14.6" fill="#93C11C"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M184.5 10.1L186.8 13.8H192.6C192.6 13.8 189.2 9.1 187.4 6.7L192.6 0H187L184.6 3.3L182.2 0H176.5L181.7 6.7C179.9 9.1 176.5 13.8 176.5 13.8H182.3L184.5 10.1ZM114 16C112.7 15.4 111.5 15.3 109.9 15.3C106 15.3 102.5 18.5 102.5 22.5C102.5 26.6 105.7 29.6 110.3 29.6C111.9 29.6 112.7 29.5 114 28.8V24.8C113.2 25.3 112.3 25.7 111 25.7C109.2 25.7 107.7 24.2 107.7 22.4C107.7 20.5 109.2 19 111.1 19C112.2 19 113.2 19.4 114 20V16ZM141.1 15.6H146.1V29.4H141.9L136.1 23.6V29.4H131.1V15.6H135.1L141.1 21.5V15.6ZM192.6 19.3V15.6H179.3C174.1 15.6 171.8 18.5 171.8 22.5C171.8 26.5 175.3 29.6 179.3 29.6C180.7 29.6 181.6 29.4 182.8 28.7V25C182 25.7 181.3 25.9 180.2 25.9C178.3 25.8 176.7 24.4 176.7 22.5C176.7 20.8 177.7 19.2 179.7 19.2H184.2V29.4H189.2V19.3H192.6ZM146.9 15.6H158.7H158.8V19.2H155.4V29.4H150.4V19.3H146.9V15.6ZM175.9 13.9H170.5V0.1H175.9V13.9ZM121.7 0.1H116.7V13.9H121.7V8.9H126V13.9H131V0.1H126V4.8H121.7V0.1ZM163.8 0.1H168.7V13.8H164.5L158.6 8V13.9H153.6V0.1H157.6L163.8 5.9V0.1ZM87.8001 20.6V18.1C87.8001 16.7 88.9001 16.2 88.9001 16.2C89.9001 15.5 90.9001 14.2 90.9001 12.7C90.9001 11.4 90.4001 10.4 89.5001 9.6C89.3261 9.45087 89.1398 9.32027 88.958 9.19285C88.4083 8.80762 87.9001 8.45145 87.9001 7.7V5C87.9001 4.2 87.9001 3.4 89.4001 3.4C94.3001 3.4 98.4001 7.9 98.4001 12.5C98.4001 17.2 94.6001 21.8 89.4001 21.8C87.7001 21.8 87.8001 20.6 87.8001 20.6ZM85.7001 24.6V18.1C85.7001 16.8 84.6001 16.2 84.6001 16.2C83.6001 15.5 82.6001 14.3 82.6001 12.7C82.7001 11.4 83.1001 10.5 84.1001 9.6C84.3157 9.38437 84.5503 9.21618 84.7718 9.05744C85.2692 8.70087 85.7001 8.39195 85.7001 7.7V5C85.7001 4.2 85.7001 3.4 84.2001 3.4H77.5001C76.7001 3.4 76.0001 4.1 76.0001 4.9V24.6C76.0001 25.4 76.8001 26.1 77.6001 26.1H84.2001C85.0001 26.1 85.7001 25.4 85.7001 24.6ZM86.8001 14.6C85.7001 14.6 84.8001 13.7 84.8001 12.6C84.8001 11.5 85.7001 10.6 86.8001 10.6C87.9001 10.6 88.8001 11.5 88.8001 12.6C88.8001 13.7 87.9001 14.6 86.8001 14.6ZM72.6001 2.1C72.6001 1 73.5001 0.1 74.6001 0.1H99.5001C100.6 0.1 101.5 1 101.5 2.1V27.3C101.5 28.4 100.6 29.3 99.5001 29.3H74.6001C73.5001 29.3 72.6001 28.4 72.6001 27.3V2.1ZM108.4 3.4H109.2C110.3 3.4 111 4 111 5C111 5.9 110.3 6.6 109.2 6.6H108.4V3.4ZM103.3 0.1H110.2C114 0.1 115.9 2 115.9 5C115.9 7.9 113 9.9 110.2 9.9H108.3V13.9H103.3V0.1ZM139.6 4.1C141.1 4.1 142 5.6 142 7.1C142 8.5 141.1 10 139.6 10C138.2 10 137.3 8.6 137.3 7.1C137.3 5.6 138.1 4.1 139.6 4.1ZM139.6 0.1H152.1V3.4H146.5V5.3H152.1V8.6H146.5V10.5H152.1V13.9H139.6C137.1 13.9 135.5 13 134.3 11.9C133.3 10.9 132.4 9 132.4 7C132.4 4.9 132.9 3.2 134.3 1.9C135.7 0.6 137.1 0.1 139.6 0.1ZM163.4 23.7L164.5 20.3L165.6 23.7H163.4ZM161.8 15.6H167.1L172.7 29.4H167.6L166.6 26.9H162.2L161.2 29.4H156.1L161.8 15.6ZM122.4 19.5C123.9 19.5 124.8 21 124.8 22.6C124.8 24.1 123.9 25.6 122.4 25.6C120.9 25.6 120 24.1 120 22.6C120 21 120.9 19.5 122.4 19.5ZM122.4 15.3C127 15.3 129.9 18.4 129.9 22.5C129.9 26.5 127 29.6 122.4 29.6C117.9 29.6 115 26.5 115 22.5C115 18.5 118 15.3 122.4 15.3Z" fill="black"/>
+          </svg>
+        </div>
+        <div class="phoenix-stats">
+          <div class="phoenix-stat">
+            <strong>100+</strong>
+            <span>países com presença global</span>
+          </div>
+          <div class="phoenix-stat">
+            <strong>100k+</strong>
+            <span>produtos no portfólio</span>
+          </div>
+          <div class="phoenix-stat">
+            <strong>+100</strong>
+            <span>anos de mercado</span>
+          </div>
+          <div class="phoenix-stat">
+            <strong>Único</strong>
+            <span>representante no Amazonas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="proof">
+  <div class="container">
+    <div class="proof-header">
+      <span class="section-label">Casos Reais</span>
+      <h2 class="section-title">Indústrias do PIM que já estão em conformidade</h2>
+      <p class="section-sub">A RRE já atende indústrias de diferentes segmentos do Polo Industrial de Manaus, entregando conformidade legal, documental e técnica.</p>
+    </div>
+
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="proof-card-header">
+          <div class="proof-avatar">Y</div>
+          <div class="proof-name">
+            <strong>Setor Automotivo — PIM</strong>
+            <span>Gerente de Manutenção</span>
+          </div>
+        </div>
+        <blockquote>A documentação entregue pela RRE foi essencial na nossa última auditoria ISO. O auditor elogiou especificamente o Book técnico e o As Built. Fechamos sem nenhuma não conformidade na área de detecção de gás.</blockquote>
+      </div>
+
+      <div class="proof-card">
+        <div class="proof-card-header">
+          <div class="proof-avatar">E</div>
+          <div class="proof-name">
+            <strong>Setor Eletroeletrônico — PIM</strong>
+            <span>Coordenador de HSE</span>
+          </div>
+        </div>
+        <blockquote>Antes da RRE, não sabíamos nem por onde começar para atender a Lei 2507. Eles fizeram o diagnóstico, entregaram o projeto e instalaram tudo em menos de 30 dias. Hoje tenho a documentação completa na prateleira.</blockquote>
+      </div>
+
+      <div class="proof-card">
+        <div class="proof-card-header">
+          <div class="proof-avatar">M</div>
+          <div class="proof-name">
+            <strong>Indústria Química — PIM</strong>
+            <span>Engenheiro de Segurança</span>
+          </div>
+        </div>
+        <blockquote>O que mais me impressionou foi a escolha dos equipamentos Phoenix Contact e MSA. Para a nossa área classificada, era exatamente o que precisávamos para atender todos os requisitos técnicos e ter a rastreabilidade que a auditoria ISO exige.</blockquote>
+      </div>
+    </div>
+
+    <div class="industry-logos">
+      <p>Setores atendidos no PIM</p>
+      <div class="logos-row">
+        <div class="logo-pill">Automotivo</div>
+        <div class="logo-pill">Eletroeletrônico</div>
+        <div class="logo-pill">Químico</div>
+        <div class="logo-pill">Alimentício</div>
+        <div class="logo-pill">Metalúrgico</div>
+        <div class="logo-pill">Petróleo &amp; Gás</div>
+        <div class="logo-pill">Saneamento</div>
+        <div class="logo-pill">Energia</div>
+        <div class="logo-pill">Agro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-box">
+    <h2>Sua indústria pode estar a um diagnóstico de conformidade total</h2>
+    <p>Fale com nosso time técnico. O diagnóstico é sem compromisso — em até 48h você sabe exatamente o que precisa ser feito.</p>
+    <div class="cta-buttons">
+      <a href="#diagnostico" class="btn-primary" style="font-size:17px; padding: 18px 40px;">
+        📅 Agendar Diagnóstico
+      </a>
+      <a href="https://wa.me/5592992930104?text=Ol%C3%A1%2C%20quero%20agendar%20um%20diagn%C3%B3stico%20para%20adequa%C3%A7%C3%A3o%20%C3%A0%20Lei%202507%2C%20ISO%2014000%20e%20ISO%2045001" class="btn-whatsapp" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <div class="cta-trust">
+      <div class="cta-trust-item">Diagnóstico sem compromisso</div>
+      <div class="cta-trust-item">Resposta em até 48h</div>
+      <div class="cta-trust-item">Atendimento presencial em Manaus</div>
+      <div class="cta-trust-item">Equipe técnica especializada</div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM SECTION -->
+<section class="form-section" id="diagnostico">
+  <div class="container">
+    <div class="form-grid">
+      <div class="form-left">
+        <span class="section-label">Solicite seu Diagnóstico</span>
+        <h2>Vamos verificar a situação da sua planta agora</h2>
+        <p>Preencha ao lado e um engenheiro da RRE entrará em contato para agendar o diagnóstico técnico presencial na sua indústria — sem compromisso.</p>
+        <div class="form-left-items">
+          <div class="form-left-item">
+            <div class="form-left-item-icon">🔍</div>
+            <div class="form-left-item-text">
+              <strong>Diagnóstico técnico presencial</strong>
+              <span>Levantamento completo da sua instalação</span>
+            </div>
+          </div>
+          <div class="form-left-item">
+            <div class="form-left-item-icon">📊</div>
+            <div class="form-left-item-text">
+              <strong>Relatório de conformidade</strong>
+              <span>O que está ok e o que precisa ser regularizado</span>
+            </div>
+          </div>
+          <div class="form-left-item">
+            <div class="form-left-item-icon">💰</div>
+            <div class="form-left-item-text">
+              <strong>Proposta técnica detalhada</strong>
+              <span>Escopo completo, prazo e investimento necessário</span>
+            </div>
+          </div>
+          <div class="form-left-item">
+            <div class="form-left-item-icon">📞</div>
+            <div class="form-left-item-text">
+              <strong>Contato direto com engenheiro</strong>
+              <span>Sem middleman — fala diretamente com quem projeta</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Agende seu diagnóstico</h3>
+        <p>Sem compromisso • Resposta em 48h</p>
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Seu nome *</label>
+              <input type="text" id="nome" placeholder="João Silva" required />
+            </div>
+            <div class="form-group">
+              <label for="cargo">Cargo *</label>
+              <input type="text" id="cargo" placeholder="Gerente de HSE" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa *</label>
+            <input type="text" id="empresa" placeholder="Nome da indústria" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telefone">Telefone/WhatsApp *</label>
+              <input type="tel" id="telefone" placeholder="(92) 99999-9999" required />
+            </div>
+            <div class="form-group">
+              <label for="segmento">Segmento</label>
+              <select id="segmento">
+                <option value="">Selecione...</option>
+                <option>Automotivo</option>
+                <option>Eletroeletrônico</option>
+                <option>Químico / Petroquímico</option>
+                <option>Alimentício / Bebidas</option>
+                <option>Metalúrgico</option>
+                <option>Farmacêutico</option>
+                <option>Saneamento</option>
+                <option>Energia</option>
+                <option>Agro</option>
+                <option>Outro</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="gas">Gás utilizado na operação</label>
+            <select id="gas">
+              <option value="">Selecione...</option>
+              <option>GLP (Gás Liquefeito de Petróleo)</option>
+              <option>GN (Gás Natural)</option>
+              <option>Amônia</option>
+              <option>CO (Monóxido de Carbono)</option>
+              <option>H2S (Sulfeto de Hidrogênio)</option>
+              <option>Múltiplos gases</option>
+              <option>Não sei / Preciso verificar</option>
+            </select>
+          </div>
+          <button type="submit" class="form-submit">
+            Agendar Diagnóstico →
+          </button>
+          <p class="form-note">🔒 Seus dados são tratados com sigilo. Não compartilhamos com terceiros.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">RRE <span>Soluções Industriais</span></div>
+  <p>
+    Representante exclusivo <strong style="color:rgba(255,255,255,0.7)">Phoenix Contact</strong> no Amazonas<br/>
+    Manaus — AM &nbsp;|&nbsp; <a href="https://www.rretecnologia.com.br" target="_blank">rretecnologia.com.br</a><br/>
+    <br/>
+    <small>Lei 2507/2019 · ISO 14000 · ISO 45001 · NR-10 · NR-20 · ABNT NBR 15358</small>
+  </p>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/5592992930104?text=Ol%C3%A1%2C+tenho+interesse+em+Detec%C3%A7%C3%A3o+de+Gases+e+gostaria+de+mais+informa%C3%A7%C3%B5es." class="wa-float" target="_blank" aria-label="Falar no WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Falar no WhatsApp</span>
+</a>
+
+<!-- EXIT INTENT POPUP -->
+<div class="exit-overlay" id="exitOverlay">
+  <div class="exit-popup">
+    <button class="exit-close" onclick="closeExit()" aria-label="Fechar">×</button>
+    <span class="exit-icon">🎯</span>
+    <h3>Antes de ir — fale com um especialista RRE</h3>
+    <p>Um engenheiro da RRE verifica se sua instalação está em conformidade com a Lei 2507/2019, ISO 14000 e ISO 45001. Agende um diagnóstico.</p>
+    <a href="https://wa.me/5592992930104?text=Ol%C3%A1%2C+vi+a+LP+de+Detec%C3%A7%C3%A3o+de+Gases+e+quero+agendar+um+diagn%C3%B3stico." class="btn-whatsapp" target="_blank" style="display:inline-flex;justify-content:center;width:100%;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Agendar diagnóstico
+    </a>
+    <button class="exit-dismiss" onclick="closeExit()">Não, obrigado — já estou em conformidade</button>
+  </div>
+</div>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    const nome = document.getElementById('nome').value;
+    const empresa = document.getElementById('empresa').value;
+    const telefone = document.getElementById('telefone').value;
+    const cargo = document.getElementById('cargo').value;
+    const segmento = document.getElementById('segmento').value || 'Não informado';
+    const gas = document.getElementById('gas').value || 'Não informado';
+
+    btn.textContent = '✓ Solicitação enviada!';
+    btn.style.background = '#16a34a';
+    btn.disabled = true;
+
+    const msg = encodeURIComponent(
+      `Olá, RRE! Sou ${nome}, ${cargo} da empresa ${empresa}.\n\n` +
+      `Quero agendar um diagnóstico para adequação à Lei 2507/2019, ISO 14000 e ISO 45001.\n\n` +
+      `Segmento: ${segmento}\nGás utilizado: ${gas}\nTelefone: ${telefone}`
+    );
+    setTimeout(() => {
+      window.open(`https://wa.me/5592992930104?text=${msg}`, '_blank');
+    }, 800);
+  }
+
+  // Hero form submit com scoring de qualificação
+  function handleHeroSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('hero-btn');
+    const nome = document.getElementById('h-nome').value;
+    const empresa = document.getElementById('h-empresa').value;
+    const cargo = document.getElementById('h-cargo').value;
+    const telefone = document.getElementById('h-telefone').value;
+
+    const isoEl = document.getElementById('h-iso');
+    const auditoriaEl = document.getElementById('h-auditoria');
+    const gasAtualEl = document.getElementById('h-gas-atual');
+
+    const isoScore = parseInt(isoEl.value) || 0;
+    const auditoriaScore = parseInt(auditoriaEl.value) || 0;
+    const gasScore = parseInt(gasAtualEl.value) || 0;
+    const totalScore = isoScore + auditoriaScore + gasScore;
+
+    const isoText = isoEl.options[isoEl.selectedIndex].text;
+    const auditoriaText = auditoriaEl.options[auditoriaEl.selectedIndex].text;
+    const gasAtualText = gasAtualEl.options[gasAtualEl.selectedIndex].text;
+
+    let classificacao, emoji;
+    if (totalScore >= 5) {
+      classificacao = 'LEAD QUENTE 🔴';
+      emoji = '🔴';
+    } else if (totalScore >= 2) {
+      classificacao = 'LEAD MORNO 🟡';
+      emoji = '🟡';
+    } else {
+      classificacao = 'LEAD FRIO ⚪';
+      emoji = '⚪';
+    }
+
+    btn.textContent = '✓ Enviado! Abrindo WhatsApp...';
+    btn.style.background = '#16a34a';
+    btn.disabled = true;
+
+    const msg = encodeURIComponent(
+      `[ÁREA: Detecção de Gases | ${classificacao}]\n\n` +
+      `Nome: ${nome}\n` +
+      `Cargo: ${cargo}\n` +
+      `Empresa: ${empresa}\n` +
+      `WhatsApp: ${telefone}\n\n` +
+      `--- Qualificação (score: ${totalScore}) ---\n` +
+      `ISO 14000/45001: ${isoText}\n` +
+      `Auditoria em 90 dias: ${auditoriaText}\n` +
+      `Detecção de gás atual: ${gasAtualText}`
+    );
+    setTimeout(() => {
+      window.open(`https://wa.me/5592992930104?text=${msg}`, '_blank');
+    }, 600);
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Exit intent popup
+  let exitShown = false;
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY <= 0 && !exitShown) {
+      exitShown = true;
+      document.getElementById('exitOverlay').classList.add('show');
+    }
+  });
+
+  // Mobile: show after 45s of inactivity
+  let mobileTimer;
+  function resetMobileTimer() {
+    clearTimeout(mobileTimer);
+    if (!exitShown) {
+      mobileTimer = setTimeout(() => {
+        exitShown = true;
+        document.getElementById('exitOverlay').classList.add('show');
+      }, 45000);
+    }
+  }
+  ['touchstart','scroll'].forEach(ev => document.addEventListener(ev, resetMobileTimer, { passive: true }));
+  resetMobileTimer();
+
+  function closeExit() {
+    document.getElementById('exitOverlay').classList.remove('show');
+  }
+
+  document.getElementById('exitOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeExit();
+  });
+</script>
+
+</body>
+</html>
