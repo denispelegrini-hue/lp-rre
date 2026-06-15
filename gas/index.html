@@ -1836,22 +1836,38 @@
 
   // Exit intent popup
   let exitShown = false;
+  let lastFormActivity = 0;
+
+  // Rastreia atividade no formulário
+  document.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('focus', () => { lastFormActivity = Date.now(); });
+    el.addEventListener('input', () => { lastFormActivity = Date.now(); });
+  });
+
+  function canShowExit() {
+    // Não mostra se o usuário interagiu com o formulário nos últimos 8 segundos
+    return !exitShown && (Date.now() - lastFormActivity > 8000);
+  }
+
+  // Desktop: exit intent (mouse saindo pelo topo em direção ao browser)
   document.addEventListener('mouseleave', function(e) {
-    if (e.clientY <= 0 && !exitShown) {
+    if (e.clientY <= 0 && canShowExit()) {
       exitShown = true;
       document.getElementById('exitOverlay').classList.add('show');
     }
   });
 
-  // Mobile: show after 45s of inactivity
+  // Mobile: mostra após 90s apenas se não estiver preenchendo formulário
   let mobileTimer;
   function resetMobileTimer() {
     clearTimeout(mobileTimer);
     if (!exitShown) {
       mobileTimer = setTimeout(() => {
-        exitShown = true;
-        document.getElementById('exitOverlay').classList.add('show');
-      }, 45000);
+        if (canShowExit()) {
+          exitShown = true;
+          document.getElementById('exitOverlay').classList.add('show');
+        }
+      }, 90000);
     }
   }
   ['touchstart','scroll'].forEach(ev => document.addEventListener(ev, resetMobileTimer, { passive: true }));
