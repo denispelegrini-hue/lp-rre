@@ -1814,7 +1814,7 @@
 
     // Mensagem limpa para o lead — sem dados de qualificação
     const msg = encodeURIComponent(
-      `Olá! Me chamo ${nome} e tenho interesse nos serviços de Detecção de Gases da RRE Engenharia. Podem me contatar?`
+      `Olá! Me chamo ${nome} e tenho interesse nos serviços de Detecção de Gases da RRE Soluções Industriais. Podem me contatar?`
     );
     setTimeout(() => {
       window.open(`https://wa.me/5592992930104?text=${msg}`, '_blank');
@@ -1822,17 +1822,31 @@
   }
 
   // Máscara telefone (92) 99999-9999
-  document.getElementById('h-telefone').addEventListener('input', function(e) {
-    let v = e.target.value.replace(/\D/g, '').slice(0, 11);
-    if (v.length > 10) {
-      v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
-    } else if (v.length > 6) {
-      v = v.replace(/^(\d{2})(\d{4})(\d*)$/, '($1) $2-$3');
-    } else if (v.length > 2) {
-      v = v.replace(/^(\d{2})(\d*)$/, '($1) $2');
-    }
-    e.target.value = v;
-  });
+  function aplicarMascaraTelefone(el) {
+    el.addEventListener('input', function(e) {
+      let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+      if (v.length > 10) {
+        v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+      } else if (v.length > 6) {
+        v = v.replace(/^(\d{2})(\d{4})(\d*)$/, '($1) $2-$3');
+      } else if (v.length > 2) {
+        v = v.replace(/^(\d{2})(\d*)$/, '($1) $2');
+      }
+      e.target.value = v;
+    });
+    // Auto-insere o 9 se o usuário sair do campo com 10 dígitos (sem o dígito extra)
+    el.addEventListener('blur', function(e) {
+      let digits = e.target.value.replace(/\D/g, '');
+      if (digits.length === 10) {
+        digits = digits.slice(0, 2) + '9' + digits.slice(2);
+        e.target.value = digits.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+      }
+    });
+  }
+  aplicarMascaraTelefone(document.getElementById('h-telefone'));
+  if (document.getElementById('telefone')) {
+    aplicarMascaraTelefone(document.getElementById('telefone'));
+  }
 
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
